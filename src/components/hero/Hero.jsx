@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+
+// assets
 import blog3 from "../../assets/images/blog/blog-3.jpg";
 
 function Hero() {
@@ -9,7 +11,6 @@ function Hero() {
                 className="hero"
                 id="home"
                 style={{ backgroundImage: `url(${blog3})` }}
-                // style="background-image: url('./images/blog/blog-3.jpg')"
             >
                 <div className="container">
                     <div className="hero-content">

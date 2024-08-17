@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+
+// assets
 import serviceicon1 from "../../assets/images/services/service-icon-1.svg";
 import serviceicon2 from "../../assets/images/services/service-icon-2.svg";
 import serviceicon3 from "../../assets/images/services/service-icon-3.svg";

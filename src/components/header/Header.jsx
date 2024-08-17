@@ -1,12 +1,26 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+// scss
 import "./Header.scss";
+
+// context
+import themeContext from "../../context/themeContext";
+import languageContext from "../../context/languageContext";
+
+// assets
 import logo from "../../assets/images/header/logo.svg";
-import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function Header() {
-    const [navbar, setNavbar] = useState(false);
     const navigate = useNavigate();
+    const { totalCount } = useSelector((state) => state.shoppingList);
+
+    const { darkMode, setDarkMode } = useContext(themeContext);
+    const { language, setLanguage } = useContext(languageContext);
+
+    const [navbar, setNavbar] = useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -20,7 +34,11 @@ function Header() {
                 <div className="container">
                     <div className="overlay" data-overlay></div>
 
-                    <Link to={`/`} className="logo">
+                    <Link
+                        to={`/`}
+                        className="logo"
+                        onClick={() => setNavbar(false)}
+                    >
                         <img
                             src={`${logo}`}
                             alt="Casmart logo"
@@ -34,7 +52,11 @@ function Header() {
                         data-navbar
                     >
                         <div className="navbar-top">
-                            <Link to={`/`} className="logo">
+                            <Link
+                                to={`/`}
+                                className="logo"
+                                onClick={() => setNavbar(false)}
+                            >
                                 <img
                                     src={`${logo}`}
                                     alt="Casmart logo"
@@ -69,53 +91,53 @@ function Header() {
 
                         <ul className="navbar-list">
                             <li>
-                                <a
-                                    href="#home"
+                                <Link
+                                    to={`/home`}
                                     className="navbar-link"
                                     onClick={() => setNavbar(false)}
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a
-                                    href="#service"
+                                <Link
+                                    to={`/home#service`}
                                     className="navbar-link"
                                     onClick={() => setNavbar(false)}
                                 >
                                     About
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a
-                                    href="#product"
+                                <Link
+                                    to={`/home#product`}
                                     className="navbar-link"
                                     onClick={() => setNavbar(false)}
                                 >
                                     Shop
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a
-                                    href="#blog"
+                                <Link
+                                    to={`/home#blog`}
                                     className="navbar-link"
                                     onClick={() => setNavbar(false)}
                                 >
                                     Blog
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a
-                                    href="#contact"
+                                <Link
+                                    to={`/home#contact`}
                                     className="navbar-link"
                                     onClick={() => setNavbar(false)}
                                 >
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
@@ -148,7 +170,10 @@ function Header() {
                             <p className="header-action-label">Sign in</p>
                         </Link>
 
-                        <button className="header-action-btn view">
+                        <Link
+                            to={`/shopping`}
+                            className="header-action-btn view"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="1em"
@@ -196,9 +221,9 @@ function Header() {
                             <p className="header-action-label">Cart</p>
 
                             <div className="btn-badge green" aria-hidden="true">
-                                0
+                                {totalCount}
                             </div>
-                        </button>
+                        </Link>
                     </div>
 
                     <button

@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+
+// style
 import "./Footer.scss";
 
+// assets
 import payment from "../../assets/images/footer/payment-img.png";
 
 function Footer() {

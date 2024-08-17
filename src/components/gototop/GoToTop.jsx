@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+
+// style
 import "./GoToTop.scss";
 
 function GoToTop() {

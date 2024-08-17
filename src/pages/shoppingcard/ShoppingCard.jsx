@@ -1,13 +1,32 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
+import { useSelector } from "react-redux";
+
+// styles
 import "./Modlecard.scss";
 
-function Modlecard() {
+// context
+import themeContext from "../../context/themeContext";
+import languageContext from "../../context/languageContext";
+
+// components
+import Shop from "../../components/shopping/shop";
+
+function ShoppingCard() {
+    const { shoppingList, totalPrice, totalCount } = useSelector(
+        (state) => state.shoppingList
+    );
+
+    // console.log(`sho`, shoppingList, totalPrice, totalCount);
+
+    const { darkMode, setDarkMode } = useContext(themeContext);
+    const { language, setLanguage } = useContext(languageContext);
+
     return (
         <>
             <div className="model-cart">
                 <div className="container">
-                    <div className="title">
+                    {/* <div className="title">
                         <h2>list-product</h2>
 
                         <button
@@ -31,26 +50,27 @@ function Modlecard() {
                                 />
                             </svg>
                         </button>
-                    </div>
+                    </div> */}
 
                     <div className="list-products" id="list-products">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Aut ipsum exercitationem impedit nisi. Alias
-                            labore quibusdam quidem adipisci porro cumque
-                            tempora deleniti magnam, corporis, sapiente deserunt
-                            expedita eos earum. A, vitae voluptas accusantium
-                            dolores eaque sit est dolor sapiente in repellat
-                            illo doloremque minima, eum libero animi illum
-                            blanditiis qui?
-                        </p>
+                        {totalCount === 0
+                            ? ""
+                            : shoppingList.map((shop, index) => (
+                                  <React.Fragment key={index}>
+                                      <Shop shop={shop} />
+                                  </React.Fragment>
+                              ))}
                     </div>
 
-                    <div id="total">ddd</div>
+                    {totalCount !== 0 && (
+                        <div id="total">
+                            Total Price: ${totalPrice.toFixed(2)}
+                        </div>
+                    )}
                 </div>
             </div>
         </>
     );
 }
 
-export default Modlecard;
+export default ShoppingCard;

@@ -2,8 +2,17 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+// store
+import { addToShopping } from "../../../store/slices/shoppingSlice";
+
+// assets
+import noimage from "../../../assets/images/error/no-image-available.jpg";
 
 function Product({ product }) {
+    const dispatch = useDispatch();
+
     const { id, thumbnail, title, price } = product;
 
     return (
@@ -13,7 +22,7 @@ function Product({ product }) {
                     <figure className="card-banner">
                         <a>
                             <img
-                                src={`${thumbnail}`}
+                                src={`${thumbnail || noimage}`}
                                 alt="${product.title}"
                                 loading="lazy"
                                 width="800"
@@ -56,6 +65,7 @@ function Product({ product }) {
 
                             <button
                                 className="card-action-btn cart-btn"
+                                onClick={() => dispatch(addToShopping(product))}
                                 // onClick="addToCart(${product.id})"
                             >
                                 <svg

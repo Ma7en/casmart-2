@@ -3,21 +3,18 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
+// font awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {} from "@fortawesome/fontawesome-svg-core";
 import {} from "@fortawesome/free-brands-svg-icons";
 import {} from "@fortawesome/free-regular-svg-icons";
 import {} from "@fortawesome/free-solid-svg-icons";
 import {} from "@fortawesome/react-fontawesome";
-import {
-    faStar,
-    faStarHalfAlt,
-    faStar as farStar,
-} from "@fortawesome/free-solid-svg-icons";
 
-import { Link } from "react-router-dom";
+// config
 import { axiosInstance } from "../../api/config";
 
+// assets
 import avter1 from "../../assets/images/header/avter-1.png";
 
 function ProductDetails() {

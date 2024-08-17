@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
+// assets
 import category1 from "../../assets/images/category/category-1.jpg";
 import category2 from "../../assets/images/category/category-2.jpg";
 import category3 from "../../assets/images/category/category-3.jpg";

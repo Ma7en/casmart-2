@@ -1,6 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+
+// style
 import "./Contact.scss";
+
+// assets
 import logo from "../../assets/images/header/logo.svg";
 
 function Contact() {

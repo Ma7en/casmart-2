@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+
+// components
 import newsletterbg from "../../assets/images/news/newsletter-bg.png";
 
 function Newsletter() {

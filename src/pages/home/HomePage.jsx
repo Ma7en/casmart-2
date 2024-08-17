@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
+// components
 import Hero from "../../components/hero/Hero";
 import Services from "../../components/services/Services";
 import Category from "../../components/category/Category";

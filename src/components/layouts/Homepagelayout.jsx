@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+
+// components
 import Header from "../header/Header";
 import GoToTop from "../gototop/GoToTop";
 

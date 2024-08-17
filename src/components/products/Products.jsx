@@ -1,6 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
+
+// config
 import { axiosInstance } from "../../api/config.js";
+
+// components
 import Product from "./product/Product.jsx";
 
 function Products() {
