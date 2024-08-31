@@ -10,7 +10,7 @@ import {
 function Shop({ shop }) {
     const dispatch = useDispatch();
 
-    const { id, thumbnail, title, price, count } = shop;
+    const { thumbnail, title, price, count } = shop;
 
     return (
         <>
