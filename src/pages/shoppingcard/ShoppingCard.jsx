@@ -10,8 +10,7 @@ import themeContext from "../../context/themeContext";
 import languageContext from "../../context/languageContext";
 
 // components
-import Shop from "../../components/shopping/shop";
-// import Shop from "../../components/shopping/shop";
+import Shop from "../../components/shopping/Shop";
 
 function ShoppingCard() {
     const { shoppingList, totalPrice, totalCount } = useSelector(
