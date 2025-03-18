@@ -8,6 +8,7 @@ import category3 from "../../assets/images/category/category-3.jpg";
 import category4 from "../../assets/images/category/category-4.jpg";
 import category5 from "../../assets/images/category/category-5.jpg";
 import category6 from "../../assets/images/category/category-6.jpg";
+import category0 from "../../assets/images/category/category1-product-1.jpg";
 
 function Category() {
     return (
@@ -18,7 +19,7 @@ function Category() {
                         <li className="category-item">
                             <figure className="category-banner">
                                 <img
-                                    src={`${category1}`}
+                                    src={`${category0}`}
                                     alt="Sunglass & eye"
                                     loading="lazy"
                                     width="510"
@@ -35,7 +36,7 @@ function Category() {
                         <li className="category-item">
                             <figure className="category-banner">
                                 <img
-                                    src={`${category2}`}
+                                    src={`${category0}`}
                                     alt="Active & outdoor"
                                     loading="lazy"
                                     width="510"
@@ -52,7 +53,7 @@ function Category() {
                         <li className="category-item">
                             <figure className="category-banner">
                                 <img
-                                    src={`${category3}`}
+                                    src={`${category0}`}
                                     alt="Winter wear"
                                     loading="lazy"
                                     width="510"
@@ -69,7 +70,7 @@ function Category() {
                         <li className="category-item">
                             <figure className="category-banner">
                                 <img
-                                    src={`${category4}`}
+                                    src={`${category0}`}
                                     alt="Exclusive footwear"
                                     loading="lazy"
                                     width="510"
@@ -86,7 +87,7 @@ function Category() {
                         <li className="category-item">
                             <figure className="category-banner">
                                 <img
-                                    src={`${category5}`}
+                                    src={`${category0}`}
                                     alt="Jewelry"
                                     loading="lazy"
                                     width="510"
@@ -103,7 +104,7 @@ function Category() {
                         <li className="category-item">
                             <figure className="category-banner">
                                 <img
-                                    src={`${category6}`}
+                                    src={`${category0}`}
                                     alt="Sports cap"
                                     loading="lazy"
                                     width="510"
